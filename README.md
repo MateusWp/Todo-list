@@ -7,7 +7,7 @@
 <br>
 
 <p align="center">
-  <img alt="Foto Projeto DevLinks" src=".img/ps-img.png" width="100%">
+  <img alt="Foto ToDo List" src="./img/ps-img.png" width="100%">
 </p>
 
 ## 🚀 Tecnologias
