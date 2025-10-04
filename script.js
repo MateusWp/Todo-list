@@ -6,6 +6,7 @@ const todoList = document.querySelector('#todo-list');
 const editForm = document.querySelector('#edit-form');
 const editInput = document.querySelector('#edit-input');
 const cancelEditBtn = document.querySelector('#cancel-edit-btn');
+const searchInput = document.querySelector('#search-input');
 
 let oldInputValue; // Variável para armazenar o valor antigo do input
 
@@ -38,6 +39,8 @@ const saveTodo = (text) => {
     todoList.appendChild(todo); // Adiciona o elemento todo à lista de tarefas
     todoInput.value = ''; // Limpa o input após adicionar a tarefa
     todoInput.focus(); // Coloca o foco de volta no input
+
+    todoList.classList.remove('hide'); // Garante que a lista de tarefas esteja visível
 };
 
 const toggleForms = () => {
@@ -83,6 +86,7 @@ document.addEventListener('click', (e) => {
 
     if(targetEl.classList.contains('remove-todo')){ // Verifica se o botão de remover foi clicado
         parentEl.remove(); // Remove a tarefa
+        // setAttribute("id", 'remove-todo'), colocar ID ao invés de CLASS
     }
 
     if(targetEl.classList.contains('edit-todo')){ // Verifica se o botão de editar foi clicado
@@ -108,3 +112,7 @@ editForm.addEventListener('submit', (e) => {
     toggleForms(); // Alterna entre os formulários
 
 });
+
+// barra de pesquisa deletando a lista//
+
+// filtro não funciona //
